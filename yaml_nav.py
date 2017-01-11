@@ -45,7 +45,7 @@ def is_yaml_view(view):
     Returns true if given view contains YAML code.
     """
 
-    return view.score_selector(0, "source.yaml") > 0
+    return re.search('\.yml$', view.file_name())
 
 
 def get_setting(key):
